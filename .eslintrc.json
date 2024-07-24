@@ -1,0 +1,16 @@
+{
+	"extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended-type-checked"],
+	"plugins": ["@typescript-eslint"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": ["./tsconfig.json"]
+	},
+	"root": true,
+	"rules": {
+		"no-console": ["error", { "allow": ["warn", "debug", "log", "error"] }], //TODO remove this
+		"@typescript-eslint/no-var-requires": 0,
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unsafe-assignment": "warning"
+	},
+	"ignorePatterns": ["./node_modules", "**/dist/*", "jest.config.js"]
+}
